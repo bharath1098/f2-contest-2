@@ -6,26 +6,50 @@ let arr = [
   { id: 3, name: "karen", age: "19", profession: "admin" },
 ];
 
+console.log(" ");
+console.log("PrintDeveloperbyMap function");
+console.log(" ");
 
+//callback function for map
+function callback(element,index,arr){
+  if(element.profession=="developer"){
+    return element;
+  }
+  return ;
+}
 
 function PrintDeveloperbyMap() {
-  //Write your code here , just console.log
-  for(let i=0;i<arr.length;i++){
-    if(arr[i].profession=="developer"){
-      console.log(arr[i]);
-    }
+  //Write your code here , just console.log  
+     let result =arr.map(callback);
+     console.log(result);
+}
+
+PrintDeveloperbyMap() ;
+
+console.log(" ");
+console.log("PrintDeveloperbyForEach function");
+console.log(" ");
+
+//callback function for foreach
+function func(element,index,arr){
+  
+  if(element.profession=="developer"){
+     console.log(element);
   }
+
 }
 
 function PrintDeveloperbyForEach() {
   //Write your code here , just console.log
-  for(let i=0;i<arr.length;i++){
-    if(arr[i].profession=="developer"){
-      console.log(arr[i]);
-    }
-  }
+  arr.forEach(func);
+
 }
 
+PrintDeveloperbyForEach();
+
+console.log(" ");
+console.log("addData function");
+console.log(" ");
 
 function addData() {
   //Write your code here, just console.log
@@ -38,6 +62,12 @@ function addData() {
   }
 }
 
+addData() ;
+
+
+console.log(" ");
+console.log("removeadmin function");
+console.log(" ");
 
 function removeAdmin() {
   //Write your code here, just console.log
@@ -62,6 +92,12 @@ function removeAdmin() {
 
 }
 
+removeAdmin();
+
+console.log(" ");
+console.log(" concatenateArray function ");
+console.log(" ");
+
 let arr2 = [
   { id: 4, name: "bharath", age: "24", profession: "SDE" },
   { id: 5, name: "kumar", age: "23", profession: "Tester" },
@@ -74,3 +110,6 @@ function concatenateArray() {
 
   console.log(concArray);
 }
+
+
+concatenateArray();
